@@ -1,84 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>README</title>
-</head>
-<body>
-    <h1>The Authors Blog Website - Backend</h1>
+# The Authors Blog Website - Backend
 
-    <h2>Project Description</h2>
-    <p>The Authors Blog Website is a comprehensive platform that allows users to create posts, like and comment on them, and manage their accounts through user registration, login, and logout functionalities. This repository contains the backend codebase for the platform.</p>
+## Project Description
 
-    <h2>Features</h2>
-    <ul>
-        <li><strong>Post Creation</strong>: Users can create, edit, and delete blog posts.</li>
-        <li><strong>Likes and Comments</strong>: Users can like and comment on posts.</li>
-        <li><strong>User Authentication</strong>: Registration, login, and logout functionalities.</li>
-        <li><strong>Asynchronous Tasks</strong>: Background task management for sending emails and other operations.</li>
-    </ul>
+The Authors Blog Website is a comprehensive platform that allows users to create posts, like and comment on them, and manage their accounts through user registration, login, and logout functionalities. This repository contains the backend codebase for the platform.
 
-    <h2>Technologies & Achievements</h2>
+## Features
 
-    <h3>Docker</h3>
-    <p>Deployed using multiple containers for different services:</p>
-    <ul>
-        <li><strong>Django</strong>: The web framework.</li>
-        <li><strong>PostgreSQL</strong>: The database.</li>
-        <li><strong>Redis</strong>: In-memory data structure store for Celery.</li>
-        <li><strong>Nginx</strong>: Web server for serving static files and handling requests.</li>
-    </ul>
+- **Post Creation**: Users can create, edit, and delete blog posts.
+- **Likes and Comments**: Users can like and comment on posts.
+- **User Authentication**: Registration, login, and logout functionalities.
+- **Asynchronous Tasks**: Background task management for sending emails and other operations.
 
-    <h3>Django & DRF (Django Rest Framework)</h3>
-    <p>Developed RESTful APIs with Class-Based Views for efficient CRUD operations.</p>
+## Technologies & Achievements
 
-    <h3>Security</h3>
-    <ul>
-        <li>Secured APIs with HTTPS/SSL.</li>
-        <li>Implemented token-based authentication to ensure secure access to the APIs.</li>
-    </ul>
+### Docker
+- Deployed using multiple containers for different services:
+  - **Django**: The web framework.
+  - **PostgreSQL**: The database.
+  - **Redis**: In-memory data structure store for Celery.
+  - **Nginx**: Web server for serving static files and handling requests.
 
-    <h3>Asynchronous Tasks</h3>
-    <p>Managed asynchronous tasks with <strong>Celery</strong> and <strong>Redis</strong>. Monitored task execution via <strong>Flower</strong>.</p>
+### Django & DRF (Django Rest Framework)
+- Developed RESTful APIs with Class-Based Views for efficient CRUD operations.
 
-    <h3>API Testing</h3>
-    <p>Used <strong>Pytest</strong> along with factories and fixtures for comprehensive testing of the APIs.</p>
+### Security
+- Secured APIs with HTTPS/SSL.
+- Implemented token-based authentication to ensure secure access to the APIs.
 
-    <h3>Email Management</h3>
-    <p>Integrated <strong>Mailhog</strong> for email testing in the development environment. Used <strong>Mailgun</strong> for email management in the production environment.</p>
+### Asynchronous Tasks
+- Managed asynchronous tasks with **Celery** and **Redis**.
+- Monitored task execution via **Flower**.
 
-    <h3>Static & Media Files</h3>
-    <p>Served static and media files efficiently with <strong>Nginx</strong> and <strong>Whitenoise</strong>.</p>
+### API Testing
+- Used **Pytest** along with factories and fixtures for comprehensive testing of the APIs.
 
-    <h3>Automation</h3>
-    <p>Streamlined development workflows with Shell Scripting and Makefiles.</p>
+### Email Management
+- Integrated **Mailhog** for email testing in the development environment.
+- Used **Mailgun** for email management in the production environment.
 
-    <h2>Installation</h2>
+### Static & Media Files
+- Served static and media files efficiently with **Nginx** and **Whitenoise**.
 
-    <h3>Prerequisites</h3>
-    <ul>
-        <li>Docker</li>
-        <li>Docker Compose</li>
-    </ul>
+### Automation
+- Streamlined development workflows with Shell Scripting and Makefiles.
 
+## Installation
 
+### Prerequisites
+- Docker
+- Docker Compose
 
-    <h2>Usage</h2>
-    <ul>
-        <li>Access the application at <code>http://localhost</code>.</li>
-        <li>Admin interface at <code>http://localhost/admin</code>.</li>
-    </ul>
+### Steps
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/the-authors-blog-backend.git
+    cd the-authors-blog-backend
+    ```
+2. Build and start the Docker containers:
+    ```bash
+    docker-compose up --build
+    ```
+3. Apply the migrations:
+    ```bash
+    docker-compose exec web python manage.py migrate
+    ```
+4. Create a superuser for the Django admin:
+    ```bash
+    docker-compose exec web python manage.py createsuperuser
+    ```
 
-    <h2>Testing</h2>
-    <p>Run the tests using Pytest:
-        <pre><code>docker-compose exec web pytest</code></pre>
-    </p>
+## Usage
 
-    <h2>Contributing</h2>
-    <p>Contributions are welcome! Please open an issue or submit a pull request.</p>
+- Access the application at `http://localhost`.
+- Admin interface at `http://localhost/admin`.
 
-    <h2>License</h2>
-    <p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p>
-</body>
-</html>
+## Testing
+
+Run the tests using Pytest:
+```bash
+docker-compose exec web pytest
