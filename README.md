@@ -53,7 +53,7 @@ The Authors Blog Website is a comprehensive platform that allows users to create
 ### Steps
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/the-authors-blog-backend.git
+    git clone https://github.com/yourusername/-Authors-Blog.git
     cd the-authors-blog-backend
     ```
 2. Build and start the Docker containers:
