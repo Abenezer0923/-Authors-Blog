@@ -62,22 +62,7 @@
         <li>Docker Compose</li>
     </ul>
 
-    <h3>Steps</h3>
-    <ol>
-        <li>Clone the repository:
-            <pre><code>git clone https://github.com/yourusername/the-authors-blog-backend.git
-cd the-authors-blog-backend</code></pre>
-        </li>
-        <li>Build and start the Docker containers:
-            <pre><code>docker-compose up --build</code></pre>
-        </li>
-        <li>Apply the migrations:
-            <pre><code>docker-compose exec web python manage.py migrate</code></pre>
-        </li>
-        <li>Create a superuser for the Django admin:
-            <pre><code>docker-compose exec web python manage.py createsuperuser</code></pre>
-        </li>
-    </ol>
+
 
     <h2>Usage</h2>
     <ul>
